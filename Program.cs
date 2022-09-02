@@ -1,7 +1,14 @@
+using Microsoft.EntityFrameworkCore;
+using Wallet_Example.Models;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+//Dependence injection
+builder.Services.AddDbContext<AppDbContext>(options =>
+options.UseSqlServer(builder.Configuration.GetConnectionString("DevConnection")));
 
 var app = builder.Build();
 
