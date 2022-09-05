@@ -12,7 +12,7 @@ using Wallet_Example.Models;
 namespace Wallet_Example.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20220904190452_Initial Create")]
+    [Migration("20220905204649_Initial Create")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
