@@ -24,6 +24,30 @@ body {
     font-size: x-large;
 }
 
+.e-btn-group.custom-rbt-group {
+    width: 100%;
+}
+
+.e-btn-group.custom-rbt-group .e-btn {
+    width: 50%;
+}
+
+
+.custom-rbt-group label.e-btn {
+    background-color: rgb(34 43 51);
+    box-shadow: none !important;
+    border: 1px solid #fff;
+    color: #fff;
+}
+
+.e-btn-group.custom-rbt-group input:checked + label.e-btn {
+    background-color: #fff;
+    color: #212b36;
+    border: 1px solid #fff;
+}
+
+
+
 /*.body {
     width: 100%;
     height: 100vh;
