@@ -8,9 +8,11 @@ namespace Wallet_Example.Models
         [Key]
         public int TransactionId { get; set; }
 
+        [Range(1, int.MaxValue, ErrorMessage = "please select a category.")]
         public int CategoryId { get; set; }
         public Category? Category { get; set; }
 
+        [Range(1, int.MaxValue, ErrorMessage = "amount should be greater than 0.")]
         public string Amount{ get; set; }
 
         [Column(TypeName = "nvarchar(80)")]
