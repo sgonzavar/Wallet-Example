@@ -16,5 +16,8 @@ namespace Wallet_Example.Models
 
         [Column(TypeName = "nvarchar(15)")]
         public string Type { get; set; } = "Expense Test Class";
+
+        [NotMapped]
+        public string? TitleIcon { get { return this.Icon + " " + this.Title; } }
     }
 }
