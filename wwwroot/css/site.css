@@ -133,12 +133,17 @@ body {
     padding: 10px 10px;
 }
 
-/*Menu*/
-#menu {
-    width: 100% !important;
-    background-color: inherit;
-    overflow: hidden;
-}
+    .app-logo img {
+        width: 35px;
+        filter: invert(1);
+    }
+
+    /*Menu*/
+    #menu {
+        width: 100% !important;
+        background-color: inherit;
+        overflow: hidden;
+    }
 
     #menu .e-menu-item:not(.e-separator) {
         height: 50px;
@@ -171,7 +176,7 @@ body {
         text-transform: uppercase;
         font-weight: bold;
         font-size: 13px;
-        color: #65da41;
+        color: #41b0da;
     }
 
         #menu .e-menu-item.e-separator:not(:first-child) {

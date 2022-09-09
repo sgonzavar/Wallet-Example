@@ -55,9 +55,8 @@ namespace Wallet_Example.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("TransactionId"), 1L, 1);
 
-                    b.Property<string>("Amount")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int>("Amount")
+                        .HasColumnType("int");
 
                     b.Property<int>("CategoryId")
                         .HasColumnType("int");

@@ -12,7 +12,7 @@ using Wallet_Example.Models;
 namespace Wallet_Example.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20220905204649_Initial Create")]
+    [Migration("20220909192931_Initial Create")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -57,9 +57,8 @@ namespace Wallet_Example.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("TransactionId"), 1L, 1);
 
-                    b.Property<string>("Amount")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int>("Amount")
+                        .HasColumnType("int");
 
                     b.Property<int>("CategoryId")
                         .HasColumnType("int");

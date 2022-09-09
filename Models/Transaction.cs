@@ -12,8 +12,8 @@ namespace Wallet_Example.Models
         public int CategoryId { get; set; }
         public Category? Category { get; set; }
 
-        [Range(1, int.MaxValue, ErrorMessage = "amount should be greater than 0.")]
-        public string Amount{ get; set; }
+        [Range(1, int.MaxValue, ErrorMessage = "Amount should be greater than 0.")]
+        public int Amount { get; set; }
 
         [Column(TypeName = "nvarchar(80)")]
         public string? Note { get; set; }
@@ -30,7 +30,8 @@ namespace Wallet_Example.Models
         public string? FormattedAmount
         {
             get{return ((Category == null || Category.Type == "Expense") ? "- " :
-                    "+ ") + Amount.ToString();}
+                    "+ ") + Amount.ToString("C0");
+            }
         }
     }
 }

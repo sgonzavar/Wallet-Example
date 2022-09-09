@@ -31,7 +31,7 @@ namespace Wallet_Example.Migrations
                     TransactionId = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     CategoryId = table.Column<int>(type: "int", nullable: false),
-                    Amount = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Amount = table.Column<int>(type: "int", nullable: false),
                     Note = table.Column<string>(type: "nvarchar(80)", nullable: true),
                     Date = table.Column<DateTime>(type: "datetime2", nullable: false)
                 },
